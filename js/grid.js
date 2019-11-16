@@ -59,6 +59,9 @@ class Grid {
      * @param {Number} y 
      */
     flipNeigbours(x, y) {
+        if (!Utils.isValidMove(x, y)) {
+            return;
+        }
         for (let pos of this.neighbours) {
             let new_x = x + pos[0];
             let new_y = y + pos[1];
