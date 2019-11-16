@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Game of Flip</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/tab_icon.ico">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+</head>
+
+<body>
+    <div id="sketch_view">
+        <script type="text/javascript" src="js/utils.js"></script>
+        <script type="text/javascript" src="js/grid.js"></script>
+        <script type="text/javascript" src="js/sketch.js"></script>
+    </div>
+    <div id="settings">
+        <table id="settings_table">
+            <tr>
+                <th>Description</th>
+                <th>Setting</th>
+            </tr>
+            <tr>
+                <td>Columns</td>
+                <td>
+                    <input class="grid_pref" id="cols_in" type="number" value="5">
+                </td>
+            </tr>
+            <tr>
+                <td>Rows</td>
+                <td>
+                    <input class="grid_pref" id="rows_in" type="number" value="5">
+                </td>
+            </tr>
+            <tr>
+                <td>Square Width</td>
+                <td>
+                    <input class="grid_pref" id="sq_width" type="number" value="50">
+                </td>
+            </tr>
+            <tr>
+                <td>New Game</td>
+                <td>
+                    <button type="button" onclick="setup()">New Game</button>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <p id="game_state">Game state: <span id="solve_span" class="unsvoled">unsolved</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
